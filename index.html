@@ -42,13 +42,13 @@
       <h2>Inscripción</h2>
       <div class="form-container">
         <div class="inputs-container">
-          <input id="name" type="text" placeholder="Nombre" />
-          <input id="surname" type="text" placeholder="Apellido" />
+          <input id="firstName" type="text" placeholder="Nombre" />
+          <input id="lastName" type="text" placeholder="Apellido" />
           <input id="age" type="text" placeholder="Edad" />
-          <input id="mail" type="text" placeholder="E-mail" />
-          <input id="cell" type="text" placeholder="Celular" />
-          <select id="roll">
-            <option value="" disabled selected>Roll</option>
+          <input id="email" type="text" placeholder="E-mail" />
+          <input id="phoneNumber" type="text" placeholder="Celular" />
+          <select id="role">
+            <option value="" disabled selected>Role</option>
             <option value="lider">Líder</option>
             <option value="follower">Follower</option>
           </select>
@@ -58,89 +58,68 @@
           <fieldset>
             <legend>Principiante</legend>
             <label
-              ><input
-                id="Horario1"
-                type="radio"
-                name="horario_principiante"
-                checked
-              />Lun y Mier de 10 a 12 hs</label
+              ><input id="Horario1" type="radio" name="horario" checked />Lun y
+              Mier de 10 a 12 hs</label
             >
             <label
-              ><input
-                id="Horario2"
-                type="radio"
-                name="horario_principiante"
-              />Lun y Mier de 12 a 14 hs</label
+              ><input id="Horario2" type="radio" name="horario" />Lun y Mier de
+              12 a 14 hs</label
             >
             <label
-              ><input
-                id="Horario3"
-                type="radio"
-                name="horario_principiante"
-              />Mar y Juev de 10 a 12 hs</label
+              ><input id="Horario3" type="radio" name="horario" />Mar y Juev de
+              10 a 12 hs</label
             >
             <label
-              ><input
-                id="Horario4"
-                type="radio"
-                name="horario_principiante"
-              />Mar y Juev de 12 a 14 hs</label
+              ><input id="Horario4" type="radio" name="horario" />Mar y Juev de
+              12 a 14 hs</label
             >
           </fieldset>
           <fieldset>
             <legend>Intermedio</legend>
             <label
-              ><input
-                id="Horario5"
-                type="radio"
-                name="horario_intermedio"
-                checked
-              />Lun y Mier de 10 a 12 hs</label
+              ><input id="Horario5" type="radio" name="horario" />Lun y Mier de
+              10 a 12 hs</label
             >
             <label
-              ><input id="Horario6" type="radio" name="horario_intermedio" />Lun
-              y Mier de 12 a 14 hs</label
+              ><input id="Horario6" type="radio" name="horario" />Lun y Mier de
+              12 a 14 hs</label
             >
             <label
-              ><input id="Horario7" type="radio" name="horario_intermedio" />Mar
-              y Juev de 10 a 12 hs</label
+              ><input id="Horario7" type="radio" name="horario" />Mar y Juev de
+              10 a 12 hs</label
             >
             <label
-              ><input id="Horario8" type="radio" name="horario_intermedio" />Mar
-              y Juev de 12 a 14 hs</label
+              ><input id="Horario8" type="radio" name="horario" />Mar y Juev de
+              12 a 14 hs</label
             >
           </fieldset>
           <fieldset>
             <legend>Avanzado</legend>
             <label
-              ><input
-                id="Horario9"
-                type="radio"
-                name="horario_avanzado"
-                checked
-              />Lun y Mier de 10 a 12 hs</label
+              ><input id="Horario9" type="radio" name="horario" />Lun y Mier de
+              10 a 12 hs</label
             >
             <label
-              ><input id="Horario10" type="radio" name="horario_avanzado" />Lun
-              y Mier de 12 a 14 hs</label
+              ><input id="Horario10" type="radio" name="horario" />Lun y Mier de
+              12 a 14 hs</label
             >
             <label
-              ><input id="Horario11" type="radio" name="horario_avanzado" />Mar
-              y Juev de 10 a 12 hs</label
+              ><input id="Horario11" type="radio" name="horario" />Mar y Juev de
+              10 a 12 hs</label
             >
             <label
-              ><input id="Horario12" type="radio" name="horario_avanzado" />Mar
-              y Juev de 12 a 14 hs</label
+              ><input id="Horario12" type="radio" name="horario" />Mar y Juev de
+              12 a 14 hs</label
             >
           </fieldset>
         </div>
       </div>
       <h2>Selecciona tu pack de clases</h2>
       <div class="button-container">
-        <button class="class-button">PACK X UNA $10.000</button>
-        <button class="class-button">PACK X TRES $28.000</button>
-        <button class="class-button">PACK X SEIS $54.000</button>
-        <button class="class-button">PACK X DOCE $100.000</button>
+        <button class="class-button" id="pack1">PACK X UNA $10.000</button>
+        <button class="class-button" id="pack2">PACK X TRES $28.000</button>
+        <button class="class-button" id="pack3">PACK X SEIS $54.000</button>
+        <button class="class-button" id="pack4">PACK X DOCE $100.000</button>
       </div>
       <h2>Medios de pago</h2>
       <div class="payment-table">
@@ -158,45 +137,36 @@
           <tbody>
             <tr>
               <td>
-                <select>
+                <select id="cardType">
                   <option value="debito">Débito</option>
                   <option value="credito">Crédito</option>
                 </select>
               </td>
-              <td><input type="text" placeholder="Número de tarjeta" /></td>
+              <td><input id="cardNumber"  type="text" placeholder="Número de tarjeta" pattern="\d*" maxlength="16" /></td>
               <td>
-                <select>
+                <select id="card">
                   <option value="visa">Visa</option>
                   <option value="mastercard">Mastercard</option>
                   <option value="cabal">Cabal</option>
                 </select>
               </td>
-              <td><input type="text" placeholder="xx/xx" /></td>
-              <td><input type="text" placeholder="Tres dígitos" /></td>
-              <td><input type="text" placeholder="Nombre completo" /></td>
+              <td><input id="date" type="text" placeholder="xx/xx" pattern="\d*" maxlength="5" /></td>
+              <td><input id="code" type="text" placeholder="Tres dígitos" pattern="\d*" maxlength="3" /></td>
+              <td><input id="fullName" type="text" placeholder="Nombre completo" /></td>
             </tr>
           </tbody>
         </table>
       </div>
-
-      <button class="pay-button">Inscribirme</button>
-      <h2>Contactanos</h2>
       <div class="input-container">
-        <input
-          id="mail-input"
-          class="contact-input"
-          type="text"
-          placeholder="Correo electrónico"
-        />
         <textarea
-          id="message-input"
+          id="comment"
           class="contact-input"
-          placeholder="Mensaje"
+          placeholder="Dejanos un mensaje"
           rows="3"
         ></textarea>
       </div>
-
-      <button id="add-task-button">Enviar</button>
+      <button class="pay-button" id="inscribirme-button">Inscribirme</button>
+      <h2>Contactanos</h2>
       <p>¡Te esperamos con los brazos abiertos y el corazón lleno de música!</p>
       <hr class="bottom-line" />
       <footer>
