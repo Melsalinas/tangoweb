@@ -5,7 +5,7 @@ html {
   height: 100%;
   font-family: Arial, sans-serif;
   box-sizing: border-box;
-  background: url("fondoocho.jpeg") no-repeat center center fixed;
+  background: url("/public/fondoocho.jpeg") no-repeat center center fixed;
   background-size: cover;
 }
 
